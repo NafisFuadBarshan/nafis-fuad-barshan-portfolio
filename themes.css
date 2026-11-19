@@ -1,0 +1,143 @@
+/* =====================================================================
+   themes.css — dual-axis theme system
+   Axis 1: data-mode  = light | dark
+   Axis 2: data-theme = editorial | studio | botanical | amber
+   Both attributes live on <html>; every combination defines the same
+   semantic tokens, and the rest of the site only ever reads these.
+   ===================================================================== */
+
+/* ---------- Editorial ---------- */
+:root[data-mode="light"][data-theme="editorial"] {
+  --bg-primary: #F9F8F6; --surface: #FFFFFF;
+  --text-primary: #18181B; --text-secondary: #52525B;
+  --accent: #EA580C; --border: #E4E4E7;
+  --on-accent: #FFFFFF; color-scheme: light;
+}
+:root[data-mode="dark"][data-theme="editorial"] {
+  --bg-primary: #121212; --surface: #1C1C1E;
+  --text-primary: #F4F4F5; --text-secondary: #A1A1AA;
+  --accent: #FB923C; --border: #27272A;
+  --on-accent: #121212; color-scheme: dark;
+}
+
+/* ---------- Precision Studio ---------- */
+:root[data-mode="light"][data-theme="studio"] {
+  --bg-primary: #F8FAFC; --surface: #FFFFFF;
+  --text-primary: #0F172A; --text-secondary: #475569;
+  --accent: #4F46E5; --border: #E2E8F0;
+  --on-accent: #FFFFFF; color-scheme: light;
+}
+:root[data-mode="dark"][data-theme="studio"] {
+  --bg-primary: #090D16; --surface: #111827;
+  --text-primary: #F8FAFC; --text-secondary: #94A3B8;
+  --accent: #818CF8; --border: #1E293B;
+  --on-accent: #090D16; color-scheme: dark;
+}
+
+/* ---------- Botanical Sage ---------- */
+:root[data-mode="light"][data-theme="botanical"] {
+  --bg-primary: #F4F7F4; --surface: #FFFFFF;
+  --text-primary: #14231C; --text-secondary: #4B6358;
+  --accent: #059669; --border: #DCE5DF;
+  --on-accent: #FFFFFF; color-scheme: light;
+}
+:root[data-mode="dark"][data-theme="botanical"] {
+  --bg-primary: #0E1512; --surface: #16211C;
+  --text-primary: #ECFDF5; --text-secondary: #86A396;
+  --accent: #34D399; --border: #23352D;
+  --on-accent: #0E1512; color-scheme: dark;
+}
+
+/* ---------- Cyber Amber ---------- */
+:root[data-mode="light"][data-theme="amber"] {
+  --bg-primary: #FAF7F2; --surface: #FFFFFF;
+  --text-primary: #1C1917; --text-secondary: #57534E;
+  --accent: #D97706; --border: #E7E5E4;
+  --on-accent: #1C1917; color-scheme: light;   /* white on #D97706 is only ~3.2:1 */
+}
+:root[data-mode="dark"][data-theme="amber"] {
+  --bg-primary: #0A0A0C; --surface: #141418;
+  --text-primary: #FAFAF9; --text-secondary: #A8A29E;
+  --accent: #FBBF24; --border: #26262C;
+  --on-accent: #0A0A0C; color-scheme: dark;
+}
+
+/* ---------- Smooth mode / theme changes ----------
+   :where() keeps specificity at 0, so any component that declares its own
+   transition (cards, buttons...) keeps it. */
+:where(*, *::before, *::after) {
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  :where(*, *::before, *::after) { transition: none; }
+}
+
+/* =====================================================================
+   Theme switcher component  (.theme-switcher)
+   ===================================================================== */
+.theme-switcher { position: relative; display: inline-flex; flex: none; }
+
+.ts-btn {
+  display: grid; place-items: center;
+  width: var(--ts-size, 38px); height: var(--ts-size, 38px);
+  border-radius: 50%; padding: 0; cursor: pointer;
+  border: 1px solid var(--accent); background: transparent; color: var(--accent);
+  transition: background-color .2s ease, color .2s ease, box-shadow .2s ease;
+}
+.ts-btn:hover, .ts-btn:focus-visible, .ts-btn[aria-expanded="true"] {
+  background: var(--accent); color: var(--on-accent); outline: none;
+}
+.ts-btn:focus-visible { box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 40%, transparent); }
+.ts-btn svg { display: block; }
+
+.ts-pop {
+  position: absolute; top: calc(100% + 12px); right: 0; z-index: 10000;
+  width: 232px; padding: 8px;
+  background: var(--surface); color: var(--text-primary);
+  border: 1px solid var(--border); border-radius: 16px;
+  box-shadow: 0 18px 48px rgba(0,0,0,.28), 0 2px 8px rgba(0,0,0,.14);
+  cursor: auto; text-align: left;
+}
+.ts-pop[hidden] { display: none; }
+.ts-title {
+  margin: 4px 8px 8px; font: 600 11px/1.2 'DM Sans', system-ui, sans-serif;
+  letter-spacing: .12em; text-transform: uppercase; color: var(--text-secondary);
+}
+.ts-list { display: grid; gap: 4px; }
+
+.ts-opt {
+  display: flex; align-items: center; gap: 10px; width: 100%;
+  padding: 9px 10px; border-radius: 11px; cursor: pointer; text-align: left;
+  font: 500 14px/1.2 'DM Sans', system-ui, sans-serif;
+  color: var(--text-primary); background: transparent;
+  border: 1px solid transparent;
+}
+.ts-opt:hover { background: color-mix(in srgb, var(--text-primary) 6%, transparent); }
+.ts-opt:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.ts-opt[aria-checked="true"] {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+.ts-dots { display: inline-flex; flex: none; }
+.ts-dot {
+  width: 18px; height: 18px; border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--text-primary) 28%, transparent);
+}
+.ts-dot + .ts-dot { margin-left: -6px; }
+.ts-dot.bg { background: var(--p-bg); }
+.ts-dot.ac { background: var(--p-ac); }
+.ts-name { flex: 1; min-width: 0; }
+.ts-check { flex: none; width: 16px; height: 16px; color: var(--accent); opacity: 0; }
+.ts-opt[aria-checked="true"] .ts-check { opacity: 1; }
+
+/* swatch preview colours follow the active mode, so pills match what you'd get */
+.ts-opt[data-theme-opt="editorial"] { --p-bg:#F9F8F6; --p-ac:#EA580C; }
+.ts-opt[data-theme-opt="studio"]    { --p-bg:#F8FAFC; --p-ac:#4F46E5; }
+.ts-opt[data-theme-opt="botanical"] { --p-bg:#F4F7F4; --p-ac:#059669; }
+.ts-opt[data-theme-opt="amber"]     { --p-bg:#FAF7F2; --p-ac:#D97706; }
+:root[data-mode="dark"] .ts-opt[data-theme-opt="editorial"] { --p-bg:#121212; --p-ac:#FB923C; }
+:root[data-mode="dark"] .ts-opt[data-theme-opt="studio"]    { --p-bg:#090D16; --p-ac:#818CF8; }
+:root[data-mode="dark"] .ts-opt[data-theme-opt="botanical"] { --p-bg:#0E1512; --p-ac:#34D399; }
+:root[data-mode="dark"] .ts-opt[data-theme-opt="amber"]     { --p-bg:#0A0A0C; --p-ac:#FBBF24; }
+
+@media (max-width: 480px) { .ts-pop { right: -8px; width: min(232px, calc(100vw - 32px)); } }

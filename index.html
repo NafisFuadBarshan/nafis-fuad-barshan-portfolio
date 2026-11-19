@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#090D16">
+  <title>Nafis Fuad Barshan | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script>(function(){var d=document.documentElement,m=null,t=null,T=['editorial','studio','botanical','amber'];try{m=localStorage.getItem('portfolio-mode');t=localStorage.getItem('portfolio-theme');if(m!=='light'&&m!=='dark'){var l=localStorage.getItem('theme');m=(l==='light'||l==='dark')?l:null}}catch(e){}if(m!=='light'&&m!=='dark')m=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';if(T.indexOf(t)<0)t='studio';d.setAttribute('data-mode',m);d.setAttribute('data-theme',t)})()</script>
+  <link rel="stylesheet" href="themes.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-logo">Nafis</div>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" title="Switch to light mode">
+      <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+    <div class="theme-switcher">
+      <button class="ts-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="themePop" aria-label="Colour theme" title="Colour theme"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 2-.9 2-2 0-.5-.2-1-.5-1.3-.3-.4-.5-.8-.5-1.3 0-1.1.9-2 2-2h2.3A3.7 3.7 0 0 0 21 10.7C21 6.4 17 3 12 3z"/><circle cx="7.5" cy="11" r="1" fill="currentColor"/><circle cx="10.5" cy="7" r="1" fill="currentColor"/><circle cx="15" cy="7.5" r="1" fill="currentColor"/></svg></button>
+      <div class="ts-pop" id="themePop" hidden>
+        <div class="ts-title" id="themePopTitle">Colour theme</div>
+        <div class="ts-list" role="radiogroup" aria-labelledby="themePopTitle">
+          <button class="ts-opt" type="button" role="radio" aria-checked="false" data-theme-opt="editorial"><span class="ts-dots" aria-hidden="true"><i class="ts-dot bg"></i><i class="ts-dot ac"></i></span><span class="ts-name">Editorial</span><svg class="ts-check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg></button>
+          <button class="ts-opt" type="button" role="radio" aria-checked="false" data-theme-opt="studio"><span class="ts-dots" aria-hidden="true"><i class="ts-dot bg"></i><i class="ts-dot ac"></i></span><span class="ts-name">Precision Studio</span><svg class="ts-check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg></button>
+          <button class="ts-opt" type="button" role="radio" aria-checked="false" data-theme-opt="botanical"><span class="ts-dots" aria-hidden="true"><i class="ts-dot bg"></i><i class="ts-dot ac"></i></span><span class="ts-name">Botanical Sage</span><svg class="ts-check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg></button>
+          <button class="ts-opt" type="button" role="radio" aria-checked="false" data-theme-opt="amber"><span class="ts-dots" aria-hidden="true"><i class="ts-dot bg"></i><i class="ts-dot ac"></i></span><span class="ts-name">Cyber Amber</span><svg class="ts-check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <a class="view-switch" href="3d.html" aria-label="Switch to the 3D portfolio" title="Switch to the 3D portfolio"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 12l9-5M12 12v10M12 12L3 7"/></svg><span>3D</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#achievements" class="nav-gold">Achievements</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#thesis">Research</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#membership" class="nav-plat">Leadership</a></li>
+      <li><a href="#participations" class="nav-silver">Participations</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="cv.html" class="nav-gold">CV</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    
+    <div class="hero-content">
+      <div class="hero-tag">CSE · UI/UX · Machine Learning</div>
+      <div class="hero-name">
+        <span>NAFIS Fuad Barshan</span>
+        <em>Fresh Graduate</em>
+      </div>
+      <p class="hero-desc">
+        Computer Science &amp; Engineering graduate from the University of Asia Pacific (CGPA 3.45 / 4.00), working across UI/UX design, machine learning and full-stack development. Recent UI/UX intern at Eutropia IT, with a thesis on career-gap recommendation.
+      </p>
+      <div class="hero-cta">
+        <a href="https://www.instagram.com/n.f.barshan/" class="btn-primary">Get In Touch ↗</a>
+        <a href="https://www.linkedin.com/in/nafis-fuad-barshan-46b5301a5/" class="btn-ghost">LinkedIn ↗</a>
+        <a href="cv.html" class="btn-ghost" style="border-color:var(--gold);color:var(--gold)">View CV ↗</a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">12</div>
+        <div class="stat-label">Projects</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">2</div>
+        <div class="stat-label">Internships</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Languages</div>
+      </div>
+    </div>
+
+    <div class="hero-image reveal">
+      <img src="profile-cutout.webp" alt="Nafis Fuad Barshan" class="profile-img" width="922" height="1152">
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="section-header reveal">
+      <span class="section-num">01</span>
+      <h2 class="section-title">About Me</h2>
+      <div class="section-line"></div>
+    </div>
+    
+    <div class="about-cols">
+
+      <!-- LEFT: Education -->
+      <div class="about-col">
+        <div class="about-title reveal">Education</div>
+        <div class="thesis-grid exp-grid reveal">
+          <div class="thesis-item">
+            <div class="thesis-content">
+              <div class="thesis-period">Jan 2022 – Jul 2026</div>
+              <div class="thesis-title">B.Sc. in Computer Science and Engineering</div>
+              <div class="thesis-subtitle">University of Asia Pacific</div>
+              <div class="thesis-desc edu-loc">74/A, Green Road, Farmgate, Dhaka 1205, Bangladesh</div>
+              <div class="thesis-desc">CGPA 3.45 / 4.00.</div>
+            </div>
+          </div>
+          <div class="thesis-item">
+            <div class="thesis-content">
+              <div class="thesis-period">2020</div>
+              <div class="thesis-title">Higher Secondary Certificate (HSC)</div>
+              <div class="thesis-subtitle">Dhaka College</div>
+              <div class="thesis-desc edu-loc">Mirpur Road, New Market, Dhaka 1205, Bangladesh</div>
+              <div class="thesis-desc">Science group · GPA 5.00 / 5.00 · Board of Intermediate and Secondary Education, Dhaka.</div>
+            </div>
+          </div>
+          <div class="thesis-item">
+            <div class="thesis-content">
+              <div class="thesis-period">2018</div>
+              <div class="thesis-title">Secondary School Certificate (SSC)</div>
+              <div class="thesis-subtitle">Govt. Laboratory High School</div>
+              <div class="thesis-desc edu-loc">4/E, Naem Road, New Market / Dhanmondi, Dhaka-1205, Bangladesh</div>
+              <div class="thesis-desc">Science group · GPA 5.00 / 5.00 · Board of Intermediate and Secondary Education, Dhaka.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Languages -->
+      <div class="about-col">
+        <div class="about-title reveal">Languages</div>
+        <div class="thesis-grid exp-grid reveal">
+          <div class="thesis-item">
+            <div class="thesis-content">
+              <div class="thesis-period">18 Nov 2022</div>
+              <div class="thesis-title">English</div>
+              <div class="thesis-subtitle">B2 level · IELTS 6.5, no band less than 6</div>
+              <div class="thesis-desc">Academic IELTS: Listening 6.5, Reading 6.5, Writing 6.0, Speaking 6.0, overall band 6.5 (CEFR B2).</div>
+            </div>
+          </div>
+          <div class="thesis-item">
+            <div class="thesis-content">
+              <div class="thesis-period">In progress</div>
+              <div class="thesis-title">Deutsch</div>
+              <div class="thesis-subtitle">A2 completed · Working toward B1</div>
+              <ol class="lang-tl"><li><time datetime="2025-04">April 2025</time><span>A1 completed, 82%</span></li><li><time datetime="2025-07">July 2025</time><span>A2 completed, 75%</span></li><li class="now"><time>Now</time><span>Working toward B1</span></li></ol>
+            </div>
+          </div>
+          <div class="thesis-item">
+            <div class="thesis-content">
+              <div class="thesis-period">Mother tongue</div>
+              <div class="thesis-title">Bangla</div>
+              <div class="thesis-subtitle">Native Speaker</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience">
+    <div class="section-header reveal">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Experience</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="thesis-grid exp-grid reveal">
+      <div class="thesis-item">
+        <div class="thesis-images-gallery gallery-contain exp-gallery" data-gallery="5000"><img src="docs/eutropia-appointment.jpg" alt="Eutropia IT appointment letter, 10 February 2026" data-doc="docs/eutropia-appointment.jpg" data-alt="Eutropia IT appointment letter, 10 February 2026" data-cap="Appointment letter, 10 Feb 2026" class="thesis-gallery-img thesis-gallery-active"><img src="docs/eutropia-certificate.jpg" alt="Eutropia IT certificate of experience, 8 June 2026" data-doc="docs/eutropia-certificate.jpg" data-alt="Eutropia IT certificate of experience, 8 June 2026" data-cap="Experience certificate, 8 Jun 2026" class="thesis-gallery-img" loading="lazy"><div class="thesis-gallery-cap" aria-live="polite"></div><div class="thesis-gallery-dots"><span class="thesis-gallery-dot thesis-dot-active" role="button" aria-label="Item 1"></span><span class="thesis-gallery-dot" role="button" aria-label="Item 2"></span></div></div>
+        <div class="thesis-content">
+          <div class="thesis-period">Feb 2026 – Jun 2026</div>
+          <div class="thesis-title">UI/UX Design Intern</div>
+          <div class="thesis-subtitle exp-company-line"><img class="exp-mini-logo" src="eutropia.jpg" alt="" width="24" height="24"> Eutropia IT</div>
+          <div class="thesis-desc">Designed user-centered interfaces and built comprehensive wireframes and intuitive prototypes that translated business requirements into seamless digital experiences. Role scope also covered high-fidelity mockups, developer collaboration on design feasibility, and user research and usability testing.</div>
+        </div>
+      </div>
+      <div class="thesis-item">
+        <div class="thesis-images-gallery gallery-contain exp-gallery" data-gallery="5000"><img src="docs/echithi-appointment.jpg" alt="eChithi appointment letter, 15 July 2025 (personal details redacted)" data-doc="docs/echithi-appointment.jpg" data-alt="eChithi appointment letter, 15 July 2025 (personal details redacted)" data-cap="Appointment letter, 15 Jul 2025" class="thesis-gallery-img thesis-gallery-active"><div class="thesis-gallery-cap" aria-live="polite"></div></div>
+        <div class="thesis-content">
+          <div class="thesis-period">Jul 15, 2025 – Sep 2025</div>
+          <div class="thesis-title">Research Executive Intern</div>
+          <div class="thesis-subtitle exp-company-line"><img class="exp-mini-logo" src="eChithi.jpg" alt="" width="24" height="24"> eChithi</div>
+          <div class="thesis-desc">Joined the Research and Development department (Innovators Season 1) under team lead Shakal Das. Focused on technical research and robotics-related documentation, and attended the RM22 workshop for hands-on experience in IoT-based research and educational robotics.</div>
+        </div>
+      </div>
+      <div class="thesis-item">
+        <div class="thesis-images-gallery gallery-contain exp-gallery" data-gallery="5000"><img src="media/scout-ramna-park.jpg" alt="Scouts seated at the Ramna Park cleaning campaign, 6 May 2011" data-doc="media/scout-ramna-park.jpg" data-alt="Scouts seated at the Ramna Park cleaning campaign, 6 May 2011" data-cap="Ramna Park cleaning campaign, 6 May 2011" class="thesis-gallery-img thesis-gallery-active"><img src="certs/scout.jpg" alt="BCSIR High School Scout Group certificate, 29 October 2011" data-doc="certs/scout.jpg" data-alt="BCSIR High School Scout Group certificate, 29 October 2011" data-cap="Scout certificate, Scout Camp and Initiation, 29 Oct 2011" class="thesis-gallery-img" loading="lazy"><div class="thesis-gallery-cap" aria-live="polite"></div><div class="thesis-gallery-dots"><span class="thesis-gallery-dot thesis-dot-active" role="button" aria-label="Item 1"></span><span class="thesis-gallery-dot" role="button" aria-label="Item 2"></span></div></div>
+        <div class="thesis-content">
+          <div class="thesis-period">2011</div>
+          <div class="thesis-title">Scout Member</div>
+          <div class="thesis-subtitle exp-company-line"><img class="exp-mini-logo" src="Bangladesh_Scouts_Logo.svg" alt="" width="24" height="24"> BCSIR High School Scout Group</div>
+          <div class="thesis-desc">Active in the BCSIR High School Scout Group. Took part in the Ramna Park cleaning campaign on 6 May 2011 and in the group’s annual Scout Camp and initiation ceremony on 29 October 2011.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- EduHelp Project moved to Projects Section -->
+
+  
+  <section id="achievements">
+    <div class="section-header reveal"><span class="section-num">03</span><h2 class="section-title">Achievements</h2><div class="section-line"></div></div>
+    <p class="ach-intro reveal"><b><span id="honorCount"></span> honors</b> earned in school, university and competition. Each card slides through its certificate, medal, photos and videos; select an image to enlarge it.</p>
+    <div id="honorsMount" class="reveal"></div>
+    <dialog id="achLightbox" aria-label="Image preview"><button class="ach-close" aria-label="Close">✕</button><img id="achLbImg" alt=""></dialog>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <div class="section-header reveal">
+      <span class="section-num">04</span>
+      <h2 class="section-title">Projects</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="projects-grid reveal">
+      <div class="project-card">
+        <div class="project-accent"></div>
+        <div class="project-image">
+          <img src="eduhelp.png" alt="EduHelp — Student-Teacher Support Platform">
+        </div>
+        <div class="project-num">01</div>
+        <div class="project-title">EduHelp — Student-Teacher Support Platform</div>
+        <div class="project-desc">Django e-learning platform for course creation, enrollment and content management, with secure authentication and admin-controlled course operations.</div>
+        <div class="project-tech">
+          <span class="tech-tag">Django</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Full-Stack</span>
+        </div>
+          <div class="project-links"><a class="project-link" href="https://github.com/NafisFuadBarshan/EduHelp/" target="_blank" rel="noopener noreferrer"><svg class="gh-ico" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>View on GitHub</span></a></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-accent"></div>
+        <div class="project-image">
+          <img src="MIMO.png" alt="MIMO-Based Radio-over-Fiber Link">
+        </div>
+        <div class="project-num">02</div>
+        <div class="project-title">MIMO-Based Radio-over-Fiber Link for Millimeter-Wave Generation</div>
+        <div class="project-desc">2×2 MIMO Radio-over-Fiber link (WDM, external optical modulators) for millimeter-wave generation in 5G networks, evaluated through Q-factor, BER and spectrum analysis.</div>
+        <div class="project-tech">
+          <span class="tech-tag">OptiSystem</span>
+          <span class="tech-tag">MIMO</span>
+          <span class="tech-tag">Optical Communication</span>
+          <span class="tech-tag">5G</span>
+        </div>
+          <div class="project-links"><a class="project-link" href="https://github.com/NafisFuadBarshan/rof-link-external-modulator-mimo" target="_blank" rel="noopener noreferrer"><svg class="gh-ico" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>View on GitHub</span></a></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-accent"></div>
+        <div class="project-image">
+          <img src="TopNoz.webp" alt="Topnoz E-Commerce Platform">
+        </div>
+        <div class="project-num">03</div>
+        <div class="project-title">Topnoz E-Commerce Platform</div>
+        <div class="project-desc">Django and PostgreSQL e-commerce application with an AI-powered price-suggestion engine and a CI/CD pipeline for continuous delivery.</div>
+        <div class="project-tech">
+          <span class="tech-tag">Django</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">AI Pricing</span>
+          <span class="tech-tag">CI/CD</span>
+        </div>
+          <div class="project-links"><a class="project-link" href="https://github.com/NafisFuadBarshan/TopNoz" target="_blank" rel="noopener noreferrer"><svg class="gh-ico" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>View on GitHub</span></a></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-accent"></div>
+        <div class="project-image">
+          <img src="Hotel_Management_System.jpeg" alt="Hotel Management System">
+        </div>
+        <div class="project-num">04</div>
+        <div class="project-title">Hotel Management System</div>
+        <div class="project-desc">Hotel network simulated in Cisco Packet Tracer, with a secure architecture covering the full hotel infrastructure.</div>
+        <div class="project-tech">
+          <span class="tech-tag">Cisco Packet Tracer</span>
+          <span class="tech-tag">Networking</span>
+          <span class="tech-tag">Security</span>
+        </div>
+          <div class="project-links"><a class="project-link" href="https://github.com/NafisFuadBarshan/Hotel-Management-System" target="_blank" rel="noopener noreferrer"><svg class="gh-ico" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>View on GitHub</span></a></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-accent"></div>
+        <div class="project-image">
+          <img src="MewWoofBD.png" alt="MewWoof BD Pet Care">
+        </div>
+        <div class="project-num">05</div>
+        <div class="project-title">MewWoof BD Pet Care</div>
+        <div class="project-desc">Django pet-care and e-commerce platform for the Bangladeshi market: product listings, care resources and online transactions.</div>
+        <div class="project-tech">
+          <span class="tech-tag">Django</span>
+          <span class="tech-tag">E-Commerce</span>
+          <span class="tech-tag">Python</span>
+        </div>
+          <div class="project-links"><a class="project-link" href="https://github.com/NafisFuadBarshan/MewWoofBD" target="_blank" rel="noopener noreferrer"><svg class="gh-ico" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>View on GitHub</span></a></div>
+      </div>
+
+      <div class="project-card project-card-cm14">
+        <div class="project-accent"></div>
+        <div class="cm14-gallery">
+          <div class="thesis-images-gallery gallery-contain has-video" data-gallery="5000">
+            <video class="thesis-gallery-img thesis-gallery-active" controls preload="metadata" playsinline poster="media/cm14-drive.jpg" src="media/cm14-drive.mp4" aria-label="CM14 robot driving test" data-cap="Driving test"></video>
+            <img src="media/cm14-team.jpg" alt="CM14 robot held up by the project team" data-cap="With the finished robot" class="thesis-gallery-img" loading="lazy">
+            <img src="media/cm14-assembly.jpg" alt="Assembling the CM14 robot" data-cap="Assembling and wiring" class="thesis-gallery-img" loading="lazy">
+            <div class="thesis-gallery-cap" aria-live="polite"></div>
+            <div class="thesis-gallery-dots">
+              <span class="thesis-gallery-dot thesis-dot-active" role="button" aria-label="Item 1"></span>
+              <span class="thesis-gallery-dot" role="button" aria-label="Item 2"></span>
+              <span class="thesis-gallery-dot" role="button" aria-label="Item 3"></span>
+            </div>
+          </div>
+        </div>
+        <div class="cm14-info">
+          <div class="project-num">06</div>
+          <div class="project-title">Peripheral Project — CM14 Robot</div>
+          <div class="project-desc">A four-wheel robot car named CM14, built on an acrylic chassis. An ESP8266 microcontroller drives four TT gear motors through an L298N motor driver, powered by two 3.7 V cells in series (7.4 V).</div>
+          <details class="cm14-details"><summary>Components &amp; power check</summary>
+          <table class="cm14-parts">
+            <tbody>
+              <tr><th scope="row">ESP8266 microcontroller</th><td>1</td></tr>
+              <tr><th scope="row">L298N motor driver</th><td>1</td></tr>
+              <tr><th scope="row">Chassis</th><td>1</td></tr>
+              <tr><th scope="row">Mounter</th><td>2</td></tr>
+              <tr><th scope="row">TT gear motor (3–6 V)</th><td>4</td></tr>
+              <tr><th scope="row">Wire</th><td>100 cm</td></tr>
+              <tr><th scope="row">Battery, 3.7 V each (2 in series = 7.4 V)</th><td>2</td></tr>
+              <tr><th scope="row">2S battery holder</th><td>1</td></tr>
+            </tbody>
+          </table>
+          <div class="cm14-note">Power check: two 3.7 V cells in series give 7.4 V nominal (about 8.4 V fully charged). The L298N drops roughly 2 V across its output stage, so the motors see about 5 V, within the TT motors’ 3–6 V rating.</div></details>
+          <div class="project-tech">
+            <span class="tech-tag">ESP8266</span>
+            <span class="tech-tag">L298N</span>
+            <span class="tech-tag">IoT</span>
+            <span class="tech-tag">Robotics</span>
+            <span class="tech-tag">Hardware</span>
+          </div>
+          <div class="project-links"><a class="project-link" href="https://github.com/NafisFuadBarshan/CM14-App-Controlled-Car" target="_blank" rel="noopener noreferrer"><svg class="gh-ico" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>View on GitHub</span></a></div>
+        </div>
+      </div>
+
+      <div class="project-card project-card-cm14 project-card-shots">
+        <div class="project-accent"></div>
+        <div class="cm14-gallery">
+          <div class="thesis-images-gallery gallery-contain" data-gallery="5000">
+            <img src="media/metro-schema.png" alt="Schema diagram of the Metro Rail Management System database" data-cap="Schema diagram" class="thesis-gallery-img thesis-gallery-active">
+            <img src="media/metro-er.png" alt="Entity-relationship diagram of the Metro Rail Management System" data-cap="ER diagram" class="thesis-gallery-img" loading="lazy">
+            <div class="thesis-gallery-cap" aria-live="polite"></div>
+            <div class="thesis-gallery-dots">
+              <span class="thesis-gallery-dot thesis-dot-active" role="button" aria-label="Item 1"></span>
+              <span class="thesis-gallery-dot" role="button" aria-label="Item 2"></span>
+            </div>
+          </div>
+        </div>
+        <div class="cm14-info">
+          <div class="project-num">07</div>
+          <div class="project-title">Metro Rail Management System</div>
+          <div class="project-desc">Relational database for a metropolitan rail network, modelled on Dhaka’s MRT Line-6: 11 tables covering stations, trains, routes, schedules, tickets, passengers, passes and feedback, with ER and schema diagrams. Built for CSE 212 (Database Management System).</div>
+          <div class="project-tech">
+          <span class="tech-tag">SQL Server</span>
+          <span class="tech-tag">T-SQL</span>
+          <span class="tech-tag">Database Design</span>
+          <span class="tech-tag">ER Modelling</span>
+        </div>
+          <div class="project-links"><a class="project-link" href="https://github.com/NafisFuadBarshan/Metro-Rail-Management-System" target="_blank" rel="noopener noreferrer"><svg class="gh-ico" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>View on GitHub</span></a></div>
+        </div>
+      </div>
+
+      <div class="project-card project-card-cm14 project-card-shots">
+        <div class="project-accent"></div>
+        <div class="cm14-gallery">
+          <div class="thesis-images-gallery gallery-contain" data-gallery="5000">
+            <img src="media/neon-1.png" alt="Neon Vanguard: wave 1 begins in the neon grid arena" data-cap="Wave 1 incoming" class="thesis-gallery-img thesis-gallery-active">
+            <img src="media/neon-2.png" alt="Neon Vanguard gameplay with enemies and the HUD" data-cap="In combat" class="thesis-gallery-img" loading="lazy">
+            <div class="thesis-gallery-cap" aria-live="polite"></div>
+            <div class="thesis-gallery-dots">
+              <span class="thesis-gallery-dot thesis-dot-active" role="button" aria-label="Item 1"></span>
+              <span class="thesis-gallery-dot" role="button" aria-label="Item 2"></span>
+            </div>
+          </div>
+        </div>
+        <div class="cm14-info">
+          <div class="project-num">08</div>
+          <div class="project-title">Neon Vanguard: Rift Protocol</div>
+          <div class="project-desc">Self-contained 3D arena-survival game in C++ with classic OpenGL/GLUT. Three weapons, wave-based enemies with pursuit AI, a dash ability, pickups, particle effects and a full HUD, all drawn from procedural geometry with no external assets.</div>
+          <div class="project-tech">
+          <span class="tech-tag">C++</span>
+          <span class="tech-tag">OpenGL</span>
+          <span class="tech-tag">GLUT</span>
+          <span class="tech-tag">Game Development</span>
+        </div>
+          <div class="project-links"><a class="project-link" href="https://github.com/NafisFuadBarshan/Neon-Vanguard" target="_blank" rel="noopener noreferrer"><svg class="gh-ico" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>View on GitHub</span></a></div>
+        </div>
+      </div>
+
+      <div class="project-card project-card-cm14 project-card-shots">
+        <div class="project-accent"></div>
+        <div class="cm14-gallery">
+          <div class="thesis-images-gallery gallery-contain" data-gallery="5000">
+            <img src="media/skills-1.png" alt="Bar chart comparing MSE, RMSE, MAE and R² of the scikit-learn and manual models" data-cap="Model metrics comparison" class="thesis-gallery-img thesis-gallery-active">
+            <img src="media/skills-2.png" alt="Actual vs predicted scatter plots for the scikit-learn and manual models" data-cap="Actual vs predicted" class="thesis-gallery-img" loading="lazy">
+            <div class="thesis-gallery-cap" aria-live="polite"></div>
+            <div class="thesis-gallery-dots">
+              <span class="thesis-gallery-dot thesis-dot-active" role="button" aria-label="Item 1"></span>
+              <span class="thesis-gallery-dot" role="button" aria-label="Item 2"></span>
+            </div>
+          </div>
+        </div>
+        <div class="cm14-info">
+          <div class="project-num">09</div>
+          <div class="project-title">Student Programming Skills Prediction</div>
+          <div class="project-desc">Multivariate linear regression that predicts how many programming languages a student knows from a 254-student survey (24 features). Implemented from scratch with NumPy (Normal Equation) and with scikit-learn; the two models give identical metrics. Built for CSE 404 (AI &amp; Expert Systems Lab).</div>
+          <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">NumPy</span>
+          <span class="tech-tag">scikit-learn</span>
+          <span class="tech-tag">Machine Learning</span>
+        </div>
+          <div class="project-links"><a class="project-link" href="https://github.com/NafisFuadBarshan/Student-Programming-Skills-Prediction" target="_blank" rel="noopener noreferrer"><svg class="gh-ico" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>View on GitHub</span></a></div>
+        </div>
+      </div>
+
+      <div class="project-card project-card-cm14 project-card-shots">
+        <div class="project-accent"></div>
+        <div class="cm14-gallery">
+          <div class="thesis-images-gallery gallery-contain" data-gallery="5000">
+            <img src="media/tour-1.png" alt="SWI-Prolog output of a summer beach recommendation query" data-cap="Query and recommendations" class="thesis-gallery-img thesis-gallery-active">
+            <img src="media/tour-2.png" alt="Entity-relationship diagram of destinations, countries, tour types and seasons" data-cap="ER diagram" class="thesis-gallery-img" loading="lazy">
+            <div class="thesis-gallery-cap" aria-live="polite"></div>
+            <div class="thesis-gallery-dots">
+              <span class="thesis-gallery-dot thesis-dot-active" role="button" aria-label="Item 1"></span>
+              <span class="thesis-gallery-dot" role="button" aria-label="Item 2"></span>
+            </div>
+          </div>
+        </div>
+        <div class="cm14-info">
+          <div class="project-num">10</div>
+          <div class="project-title">Tour Guiding System</div>
+          <div class="project-desc">Rule-based travel recommender in SWI-Prolog. A knowledge base of 36 destinations, with a focus on Bangladesh, is queried by season, tour type and budget to list matches, browse by country or pick the best-fitting trip. Built for CSE 404.</div>
+          <div class="project-tech">
+          <span class="tech-tag">Prolog</span>
+          <span class="tech-tag">Expert Systems</span>
+          <span class="tech-tag">Knowledge Base</span>
+          <span class="tech-tag">AI</span>
+        </div>
+          <div class="project-links"><a class="project-link" href="https://github.com/NafisFuadBarshan/Tour-Guiding-System" target="_blank" rel="noopener noreferrer"><svg class="gh-ico" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>View on GitHub</span></a></div>
+        </div>
+      </div>
+
+      <div class="project-card project-card-cm14 project-card-shots">
+        <div class="project-accent"></div>
+        <div class="cm14-gallery">
+          <div class="thesis-images-gallery gallery-contain" data-gallery="5000">
+            <img src="media/b1-code.png" alt="B1Skript source code of hallo_welt.b1 in VS Code" data-cap="hallo_welt.b1 source" class="thesis-gallery-img thesis-gallery-active">
+            <img src="media/b1-run.png" alt="Terminal output of running hallo_welt.b1 with the word of the day" data-cap="Running the program" class="thesis-gallery-img" loading="lazy">
+            <div class="thesis-gallery-cap" aria-live="polite"></div>
+            <div class="thesis-gallery-dots">
+              <span class="thesis-gallery-dot thesis-dot-active" role="button" aria-label="Item 1"></span>
+              <span class="thesis-gallery-dot" role="button" aria-label="Item 2"></span>
+            </div>
+          </div>
+        </div>
+        <div class="cm14-info">
+          <div class="project-num">11</div>
+          <div class="project-title">B1Skript: A German-Syntax Compiler</div>
+          <div class="project-desc">Toy programming language whose keywords are B1-level German (<code>wenn</code>, <code>solange</code>, <code>funktion</code>). A lexer, recursive-descent parser and tree-walking interpreter written from scratch in pure Python, with bilingual error messages and a unit-test suite.</div>
+          <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Compiler Design</span>
+          <span class="tech-tag">Interpreter</span>
+          <span class="tech-tag">German</span>
+        </div>
+          <div class="project-links"><a class="project-link" href="https://github.com/NafisFuadBarshan/deutsch_compiler" target="_blank" rel="noopener noreferrer"><svg class="gh-ico" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>View on GitHub</span></a></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-accent"></div>
+        <div class="project-image">
+          <img src="media/digiteach.png" alt="DigiTeach home page with a hero headline and popular course cards" loading="lazy" style="object-position:top center">
+        </div>
+        <div class="project-num">12</div>
+        <div class="project-title">DigiTeach — E-Learning &amp; Tutoring Platform</div>
+        <div class="project-desc">Flask and SQLite e-learning platform with student, instructor and admin roles: course catalog with search and filters, cart and demo checkout, progress tracking, certificates, live-class scheduling and one-to-one tutor requests. Hashed passwords, CSRF protection and a unit-test suite.</div>
+        <div class="project-tech">
+          <span class="tech-tag">Flask</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">SQLite</span>
+          <span class="tech-tag">Full-Stack</span>
+        </div>
+        <div class="project-links"><a class="project-link" href="https://github.com/NafisFuadBarshan/DigiTeach" target="_blank" rel="noopener noreferrer"><svg class="gh-ico" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>View on GitHub</span></a></div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- RESEARCH SECTION -->
+  <section id="thesis">
+    <div class="section-header reveal">
+      <span class="section-num">05</span>
+      <h2 class="section-title">Research</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="thesis-grid reveal">
+      <!-- RM22 Robotics Thesis -->
+      <div class="thesis-item">
+        <div class="thesis-images-gallery rm22-gallery" data-gallery="5000">
+          <img src="RM22__Robot.jpg" alt="RM22 team with the robot" data-cap="Team with the robot" class="thesis-gallery-img thesis-gallery-active">
+          <img src="media/rm22-team-selfie.jpg" alt="RM22 project team selfie" data-cap="The RM22 team" class="thesis-gallery-img" loading="lazy">
+          <img src="RM22__Robot__2_.jpg" alt="RM22 robot assembly" data-cap="Assembling the robot" class="thesis-gallery-img" loading="lazy">
+          <img src="media/rm22-robot-side.jpg" alt="RM22 smart car, side view" data-cap="Smart car, side view" class="thesis-gallery-img" loading="lazy">
+          <img src="media/rm22-robot-top.jpg" alt="RM22 smart car, top view with ESP8266 board" data-cap="Top view: ESP8266, motor driver, battery" class="thesis-gallery-img" loading="lazy">
+          <img src="media/rm22-robot-top-2.jpg" alt="RM22 smart car, top view" data-cap="Top view, wiring" class="thesis-gallery-img" loading="lazy">
+          <img src="media/rm22-robot-underside.jpg" alt="RM22 smart car, underside with motors and caster wheels" data-cap="Underside: motors and caster wheels" class="thesis-gallery-img" loading="lazy">
+          <img src="media/rm22-app-controller.jpg" alt="RM22 phone app with directional controls" data-cap="Wireless controller app" class="thesis-gallery-img" loading="lazy">
+          <div class="thesis-gallery-cap" aria-live="polite"></div>
+          <div class="thesis-gallery-dots">
+            <span class="thesis-gallery-dot thesis-dot-active" role="button" aria-label="Photo 1"></span>
+            <span class="thesis-gallery-dot" role="button" aria-label="Photo 2"></span>
+            <span class="thesis-gallery-dot" role="button" aria-label="Photo 3"></span>
+            <span class="thesis-gallery-dot" role="button" aria-label="Photo 4"></span>
+            <span class="thesis-gallery-dot" role="button" aria-label="Photo 5"></span>
+            <span class="thesis-gallery-dot" role="button" aria-label="Photo 6"></span>
+            <span class="thesis-gallery-dot" role="button" aria-label="Photo 7"></span>
+            <span class="thesis-gallery-dot" role="button" aria-label="Photo 8"></span>
+          </div>
+        </div>
+        <div class="thesis-content">
+          <div class="thesis-period">2025 - 2026</div>
+          <div class="thesis-title">RM22 — IoT Robot Platform</div>
+          <div class="thesis-subtitle">Research Project · RM22 Workshop on IoT Robot Platform Design</div>
+          <div class="thesis-fulltitle">RM22: Design and Development of a Scalable IoT Based Research and Educational Robot Platform</div>
+          <div class="thesis-desc">Hands-on robotics research project from the RM22 Workshop, carried out alongside my Research Executive internship at eChithi.</div>
+          <div class="thesis-people"><span>Supervisors:</span> A S Zaforullah Momtaz (Assistant Professor), Baivab Das (Assistant Professor), Prof. Dr. Shah Murtaza Rashid Al Masud<br><span>Authors:</span> Shakal Das, Nayemur Rahman, Nafis Fuad Barshan, Hriday Sarkar</div>
+          <ul class="thesis-features">
+            <li>Designed and built an ESP8266-based smart car with wireless control</li>
+            <li>Sensor integration and real-time data monitoring</li>
+            <li>Developing a scalable IoT-based robotic platform for research and educational purposes</li>
+          </ul>
+          <div class="thesis-tags">
+            <span class="thesis-tag">ESP8266</span>
+            <span class="thesis-tag">IoT</span>
+            <span class="thesis-tag">Robotics</span>
+            <span class="thesis-tag">Hardware</span>
+            <span class="thesis-tag">C++</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Student Career Gap Thesis -->
+      <div class="thesis-item">
+        <div class="thesis-images-gallery gallery-contain has-video" data-gallery="5000">
+          <img src="media/thesis-dashboard.png" alt="Student Skill Gap Analysis dashboard" data-cap="Skill gap analysis dashboard" class="thesis-gallery-img thesis-gallery-active">
+          <img src="Student_Skill_Gap_Analysis_2.png" alt="Thesis team outside the university" data-cap="Thesis team" class="thesis-gallery-img" loading="lazy">
+          <img src="media/thesis-saree-panjabi-day.jpg" alt="Thesis team with our supervisor on Saree-Panjabi Day" data-cap="Saree-Panjabi Day with our supervisor" class="thesis-gallery-img" loading="lazy">
+          <video class="thesis-gallery-img" controls preload="metadata" playsinline poster="media/thesis-predefence.jpg" src="media/thesis-predefence.mp4" aria-label="Presenting the thesis proposal at the Pre-Defence" data-cap="Pre-Defence: presenting our thesis proposal, 30 Nov 2025"></video>
+          <img src="media/thesis-book-cover.jpg" alt="The bound thesis book, July 2026" data-cap="The bound thesis book" class="thesis-gallery-img" loading="lazy">
+          <img src="media/thesis-book-reading.jpg" alt="Going through the printed thesis" data-cap="Reading the printed thesis" class="thesis-gallery-img" loading="lazy">
+          <img src="media/thesis-defence-day.jpg" alt="Defence day with teammates" data-cap="Defence day" class="thesis-gallery-img" loading="lazy">
+          <img src="media/thesis-department.jpg" alt="In front of the department after defending the thesis" data-cap="After the defence" class="thesis-gallery-img" loading="lazy">
+          <img src="media/thesis-supervisor.jpg" alt="With our supervisor and teammates" data-cap="With our supervisor" class="thesis-gallery-img" loading="lazy">
+          <div class="thesis-gallery-cap" aria-live="polite"></div>
+          <div class="thesis-gallery-dots">
+            <span class="thesis-gallery-dot thesis-dot-active" role="button" aria-label="Item 1"></span>
+            <span class="thesis-gallery-dot" role="button" aria-label="Item 2"></span>
+            <span class="thesis-gallery-dot" role="button" aria-label="Item 3"></span>
+            <span class="thesis-gallery-dot" role="button" aria-label="Item 4"></span>
+            <span class="thesis-gallery-dot" role="button" aria-label="Item 5"></span>
+            <span class="thesis-gallery-dot" role="button" aria-label="Item 6"></span>
+            <span class="thesis-gallery-dot" role="button" aria-label="Item 7"></span>
+            <span class="thesis-gallery-dot" role="button" aria-label="Item 8"></span>
+            <span class="thesis-gallery-dot" role="button" aria-label="Item 9"></span>
+          </div>
+        </div>
+        <div class="thesis-content">
+          <div class="thesis-period">2025 - 2026</div>
+          <div class="thesis-title">Student Career Gap Recommendation System</div>
+          <div class="thesis-subtitle">Academic Thesis · B.Sc. in CSE, University of Asia Pacific · July 2026</div>
+          <div class="thesis-fulltitle">A Data-Driven Framework for Career Recommendation and Competency Mapping to Bridge the Industry-Academia Gap</div>
+          <div class="thesis-desc">ML-based thesis project to identify skill gaps in students' academic profiles and provide personalized career pathway recommendations using advanced algorithms.</div>
+          <div class="thesis-people"><span>Supervisor:</span> Shammi Akhtar, Assistant Professor, CSE, UAP<br><span>Team:</span> Nafis Fuad Barshan, Tanvir Rahan Rifat, Md. Adnan Asif</div>
+          <ul class="thesis-features">
+            <li>Analyzes competency radar across technical and soft skill domains</li>
+            <li>ML models: Random Forest, XGBoost & LightGBM for career predictions</li>
+            <li>Django backend with interactive visualization dashboard</li>
+          </ul>
+          <div class="thesis-tags">
+            <span class="thesis-tag">Artificial Intelligence</span>
+            <span class="thesis-tag">Machine Learning</span>
+            <span class="thesis-tag">Django</span>
+            <span class="thesis-tag">Data Science</span>
+            <span class="thesis-tag">XGBoost</span>
+            <span class="thesis-tag">Random Forest</span>
+            <span class="thesis-tag">LightGBM</span>
+          </div>
+          <div class="thesis-links">
+            <a class="project-link" href="https://github.com/NafisFuadBarshan/Career-Recommendation-Industry-Academia-Competency-Mapping" target="_blank" rel="noopener noreferrer"><svg class="gh-ico" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills">
+    <div class="section-header reveal">
+      <span class="section-num">06</span>
+      <h2 class="section-title">Skills & Competences</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="skills-container reveal">
+      <div class="skill-group">
+        <div class="skill-cat">Design & UI/UX</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Figma</span>
+          <span class="skill-pill">User-Centered Design</span>
+          <span class="skill-pill">Wireframing & Prototyping</span>
+          <span class="skill-pill">Design Systems</span>
+          <span class="skill-pill">Usability Testing</span>
+          <span class="skill-pill">Adobe Photoshop</span>
+          <span class="skill-pill">Adobe Illustrator</span>
+          <span class="skill-pill">Adobe Lightroom</span>
+          <span class="skill-pill">Digital Drawing</span>
+          <span class="skill-pill">Adobe Premiere Pro</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-cat">Programming Languages</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">C</span>
+          <span class="skill-pill">C++</span>
+          <span class="skill-pill">Java</span>
+          <span class="skill-pill">Prolog</span>
+          <span class="skill-pill">SQL (T-SQL)</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-cat">Web & Backend</div>
+        <div class="skill-pills">
+          <span class="skill-pill">HTML/CSS</span>
+          <span class="skill-pill">Flask</span>
+          <span class="skill-pill">Django</span>
+          <span class="skill-pill">Django REST Framework</span>
+          <span class="skill-pill">REST APIs</span>
+          <span class="skill-pill">PostgreSQL</span>
+          <span class="skill-pill">SQLite</span>
+          <span class="skill-pill">CI/CD</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-cat">AI & Data Science</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Machine Learning</span>
+          <span class="skill-pill">Generative AI</span>
+          <span class="skill-pill">Random Forest</span>
+          <span class="skill-pill">XGBoost</span>
+          <span class="skill-pill">LightGBM</span>
+          <span class="skill-pill">SVM</span>
+          <span class="skill-pill">Linear Regression</span>
+          <span class="skill-pill">scikit-learn</span>
+          <span class="skill-pill">NumPy</span>
+          <span class="skill-pill">Cosine Similarity</span>
+          <span class="skill-pill">Dataset Analysis</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-cat">IoT, Networking & Electronics</div>
+        <div class="skill-pills">
+          <span class="skill-pill">ESP8266 / IoT</span>
+          <span class="skill-pill">Robotics</span>
+          <span class="skill-pill">Cisco Packet Tracer</span>
+          <span class="skill-pill">OptiSystem</span>
+          <span class="skill-pill">Optical Communication</span>
+          <span class="skill-pill">Microwind</span>
+          <span class="skill-pill">OpenGL (GLUT)</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-cat">Productivity & Research</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Microsoft Office</span>
+          <span class="skill-pill">Excel</span>
+          <span class="skill-pill">LaTeX / Overleaf</span>
+          <span class="skill-pill">Technical Writing</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-cat">Communication & Teamwork</div>
+        <div class="skill-pills">
+          <span class="skill-pill">English (B2)</span>
+          <span class="skill-pill">German (A2, working toward B1)</span>
+          <span class="skill-pill">Bangla (Native Speaker)</span>
+          <span class="skill-pill">Team Leadership</span>
+          <span class="skill-pill">Problem Solving</span>
+          <span class="skill-pill">Teamwork</span>
+          <span class="skill-pill">Communication</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="membership" class="tone-platinum">
+    <div class="section-header reveal"><span class="section-num">07</span><h2 class="section-title">Leadership Experience</h2><div class="section-line"></div></div>
+    <p class="ach-intro reveal"><b>2 roles</b> in Bangladesh’s eFootball and PES esports community: co-founding a club and competing in an organized league. Select an image to enlarge it.</p>
+    <div class="thesis-grid exp-grid mem-thesis">
+      <div class="thesis-item reveal">
+        <div class="thesis-images-gallery gallery-contain exp-gallery" data-gallery="5000"><img src="media/mqb-player-card.jpg" alt="Mes Que Un Blancos player card of Nafis Fuad Barshan" data-doc="media/mqb-player-card.jpg" data-alt="Mes Que Un Blancos player card of Nafis Fuad Barshan" data-cap="Mes Que Un Blancos player card" class="thesis-gallery-img thesis-gallery-active"><img src="media/mqb-logo.jpg" alt="Mes Que Un Blancos club logo, established 2021" data-doc="media/mqb-logo.jpg" data-alt="Mes Que Un Blancos club logo, established 2021" data-cap="Club logo · Mes Que Un Blancos, 2021" class="thesis-gallery-img" loading="lazy"><img src="media/mqb-page.png" alt="eFootball | Mes Que Un Blancos Facebook group page, 817 members, with Nafis Fuad Barshan listed as admin" data-doc="media/mqb-page.png" data-alt="eFootball | Mes Que Un Blancos Facebook group page, 817 members, with Nafis Fuad Barshan listed as admin" data-cap="Our Facebook group page · 817 members" class="thesis-gallery-img" loading="lazy"><div class="thesis-gallery-cap" aria-live="polite"></div><div class="thesis-gallery-dots"><span class="thesis-gallery-dot thesis-dot-active" role="button" aria-label="Item 1"></span><span class="thesis-gallery-dot" role="button" aria-label="Item 2"></span><span class="thesis-gallery-dot" role="button" aria-label="Item 3"></span></div></div>
+        <div class="thesis-content">
+          <div class="thesis-period">13 Mar 2021 – 30 Dec 2022</div>
+          <div class="thesis-title">Co-founder</div>
+          <div class="thesis-subtitle">Mes Que Un Blancos</div>
+          <ul class="thesis-features">
+            <li>Co-founded the club with friends and built its community, including an 817-member Facebook group where I serve as admin</li>
+            <li>Registered the team in tournaments run by official communities, including COBEG and EfCOB</li>
+          </ul>
+        </div>
+      </div>
+      <div class="thesis-item reveal">
+        <div class="thesis-images-gallery gallery-contain exp-gallery" data-gallery="5000"><img src="media/cobeg-last-match.jpg" alt="COBEG Showdown Season 1 match card: Nafis Fuad Barshan, Player of the Match" data-doc="media/cobeg-last-match.jpg" data-alt="COBEG Showdown Season 1 match card: Nafis Fuad Barshan, Player of the Match" data-cap="Player of the Match · my last COBEG match" class="thesis-gallery-img thesis-gallery-active"><img src="media/pfbd-logo.jpg" alt="PES Fighter BD club logo: Born to Fight" data-doc="media/pfbd-logo.jpg" data-alt="PES Fighter BD club logo: Born to Fight" data-cap="Club logo · PES Fighter BD" class="thesis-gallery-img" loading="lazy"><img src="media/cobeg-player-card.jpg" alt="COBEG player card of Nafis Fuad Barshan, PES Fighter BD, 28 February 2023" data-doc="media/cobeg-player-card.jpg" data-alt="COBEG player card of Nafis Fuad Barshan, PES Fighter BD, 28 February 2023" data-cap="COBEG player card · 28 Feb 2023" class="thesis-gallery-img" loading="lazy"><div class="thesis-gallery-cap" aria-live="polite"></div><div class="thesis-gallery-dots"><span class="thesis-gallery-dot thesis-dot-active" role="button" aria-label="Item 1"></span><span class="thesis-gallery-dot" role="button" aria-label="Item 2"></span><span class="thesis-gallery-dot" role="button" aria-label="Item 3"></span></div></div>
+        <div class="thesis-content">
+          <div class="thesis-period">30 Dec 2022 – 13 Jun 2024</div>
+          <div class="thesis-title">Former Player</div>
+          <div class="thesis-subtitle">PES Fighter BD</div>
+          <ul class="thesis-features">
+            <li>Competed for PES Fighter BD in COBEG Showdown Season 1 (Group 8)</li>
+            <li>Named Player of the Match in my final COBEG fixture, a 6–0 win in PES Fighter BD #A’s 11–5 victory over Invincible Brothers #B</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="participations" class="tone-silver">
+    <div class="section-header reveal"><span class="section-num">08</span><h2 class="section-title">Participations</h2><div class="section-line"></div></div>
+    <p class="ach-intro reveal"><b><span id="partCount"></span> certificates</b> from courses, webinars and competitions, plus the workshops and conferences I attended.</p>
+    <div id="partMount"></div>
+    <div class="skill-cat" style="margin:72px 0 0">Workshops & conferences</div>
+    <div class="part-list reveal">
+      <div class="part-item"><span class="part-arrow">→</span><span class="part-name">AI &amp; Machine Learning Webinar <small>· BFEW Technical Training Center × Aptech</small></span><span class="part-date">Aug 2025</span></div>
+      <div class="part-item"><span class="part-arrow">→</span><span class="part-name">Inter Department Math Olympiad <small>· Math Club, EEE, UAP</small></span><span class="part-date">Apr 2026</span></div>
+      <div class="part-item"><span class="part-arrow">→</span><span class="part-name">Inter-Departmental Math Olympiad 6.0 <small>· UAP CE Math Club</small></span><span class="part-date">Fall-25</span></div>
+      <div class="part-item"><span class="part-arrow">→</span><span class="part-name">Inter-University Math Olympiad 5.0 <small>· Math Club, CSE, UAP</small></span><span class="part-date">Fall-25</span></div>
+      <div class="part-item"><span class="part-arrow">→</span><span class="part-name">RM22 Workshop on IoT Robot Platform Design <small>· eChithi</small></span><span class="part-date">Spring-25</span></div>
+      <div class="part-item"><span class="part-arrow">→</span><span class="part-name">Intra-University Math Olympiad 3.0 <small>· Math Club, CSE, UAP</small></span><span class="part-date">Fall-24</span></div>
+      <div class="part-item"><span class="part-arrow">→</span><span class="part-name">CTF Contest 1.0 <small>· Cyber Security Club, CSE, UAP</small></span><span class="part-date">Fall-21</span></div>
+      <div class="part-item"><span class="part-arrow">→</span><span class="part-name">Intra-Department Programming Contest <small>· CSE, UAP</small></span><span class="part-date">Fall-21</span></div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <div class="section-header reveal" style="justify-content:center; margin-bottom: 40px;">
+      <span class="section-num">09</span>
+      <h2 class="section-title">Let's Connect</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-hero reveal">
+      LET'S <span>WORK</span><br>TOGETHER
+    </div>
+    <div style="text-align:center;" class="reveal">
+      <a href="mailto:nafisfuadbarshan@gmail.com" class="btn-primary" style="font-size:13px;">Send Email ↗</a>
+      <a href="cv.html" class="cv-btn" style="margin-left:12px">View CV</a>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-item">
+        <div class="contact-label">Email</div>
+        <div class="contact-value">nafisfuadbarshan@gmail.com</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Phone</div>
+        <div class="contact-value">+8801775989419</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Location</div>
+        <div class="contact-value">Dhaka, Bangladesh</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">LinkedIn</div>
+        <div class="contact-value"><a href="https://www.linkedin.com/in/nafis-fuad-barshan-46b5301a5/" style="color: var(--accent); text-decoration: none;">linkedin.com/in/nafis-fuad-barshan</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">GitHub</div>
+        <div class="contact-value"><a href="https://github.com/NafisFuadBarshan/" style="color: var(--accent); text-decoration: none;">github.com/NafisFuadBarshan</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Facebook</div>
+        <div class="contact-value"><a href="https://facebook.com/barshan2001" style="color: var(--accent); text-decoration: none;">facebook.com/barshan2001</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Instagram</div>
+        <div class="contact-value"><a href="https://www.instagram.com/n.f.barshan/" style="color: var(--accent); text-decoration: none;">instagram.com/n.f.barshan</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Nafis Fuad Barshan</div>
+    <div class="footer-text">© 2026 Nafis Fuad Barshan · Portfolio</div>
+    <div class="footer-text">Dhaka, Bangladesh</div>
+  </footer>
+
+  <script src="theme.js"></script>
+  <script src="script.js"></script>
+  <script src="ach.js"></script>
+  <script>
+    // Thesis galleries: auto-cycle, dots, captions; video slides pause the cycle
+    document.querySelectorAll('[data-gallery]').forEach(gal => {
+      const imgs = [...gal.querySelectorAll('.thesis-gallery-img')];
+      const dots = gal.querySelectorAll('.thesis-gallery-dot');
+      const cap = gal.querySelector('.thesis-gallery-cap');
+      const delay = +gal.dataset.gallery || 5000;
+      let cur = 0, timer;
+      const isVid = i => imgs[i].tagName === 'VIDEO';
+      function restart() {
+        clearInterval(timer);
+        timer = setInterval(() => {
+          const el = imgs[cur];
+          // keep waiting only while a video is actually playing; its "ended" event moves on
+          if (el.tagName === 'VIDEO' && !el.paused && !el.ended) return;
+          show((cur + 1) % imgs.length);
+        }, delay);
+      }
+      let show = function (i) {
+        cur = i;
+        imgs.forEach((im, n) => {
+          im.classList.toggle('thesis-gallery-active', n === i);
+          im.style.opacity = n === i ? '1' : '0';
+          if (im.tagName === 'VIDEO' && n !== i) im.pause();
+        });
+        dots.forEach((d, n) => d.classList.toggle('thesis-dot-active', n === i));
+        if (cap) cap.textContent = imgs[i].dataset.cap || '';
+        restart();
+      };
+      imgs.forEach((im, n) => { if (im.tagName === 'VIDEO') {
+        im.addEventListener('ended', () => show((n + 1) % imgs.length));
+      }});
+      dots.forEach((d, n) => {
+        d.setAttribute('tabindex', '0');
+        d.addEventListener('click', () => show(n));
+        d.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(n); } });
+      });
+      // Navigator lives in a bar BELOW the picture (prev / dots / next / counter), never on top of it
+      if (imgs.length > 1) {
+        const wrap = document.createElement('div');
+        wrap.className = 'gal-wrap';
+        gal.parentNode.insertBefore(wrap, gal);
+        wrap.appendChild(gal);
+        const bar = document.createElement('div');
+        bar.className = 'gal-bar';
+        const mk = (cls, label, txt) => { const b = document.createElement('button'); b.type = 'button'; b.className = cls; b.setAttribute('aria-label', label); b.textContent = txt; return b; };
+        const prev = mk('gal-arrow', 'Previous slide', '‹'), next = mk('gal-arrow', 'Next slide', '›');
+        const count = document.createElement('span'); count.className = 'gal-count'; count.setAttribute('aria-hidden', 'true');
+        const dotBox = gal.querySelector('.thesis-gallery-dots');
+        bar.append(prev, dotBox, next, count);
+        wrap.appendChild(bar);
+        prev.addEventListener('click', () => show((cur - 1 + imgs.length) % imgs.length));
+        next.addEventListener('click', () => show((cur + 1) % imgs.length));
+        gal._count = count;
+      }
+      const _show = show;
+      show = function (i) { _show(i); if (gal._count) gal._count.textContent = (i + 1) + ' / ' + imgs.length; };
+      show(0);
+    });
+
+    // ===== HAMBURGER MENU & RESPONSIVE NAV =====
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    const navItems = navLinks.querySelectorAll('a');
+
+    // Toggle hamburger menu
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+      navToggle.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        navLinks.classList.remove('nav-active');
+        navToggle.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('nav')) {
+        navLinks.classList.remove('nav-active');
+        navToggle.classList.remove('active');
+      }
+    });
+
+    // Active link detection based on scroll position
+    const sections = document.querySelectorAll('section');
+    
+    function updateActiveLink() {
+      let currentSection = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (window.scrollY >= sectionTop - 200) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+
+      navItems.forEach(item => {
+        item.classList.remove('nav-active');
+        if (item.getAttribute('href') === '#' + currentSection) {
+          item.classList.add('nav-active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveLink);
+    updateActiveLink();
+  </script>
+</body>
+</html>
